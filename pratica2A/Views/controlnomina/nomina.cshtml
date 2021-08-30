@@ -1,0 +1,46 @@
+﻿@model pratica2A.Models.nomina
+
+
+@{
+    Layout = null;
+
+
+    double SALARIO = 100000;
+    double AFP = 0.03;
+    double ARS = 0.02;
+    double ISR = 0.1;
+    double SALARIONETO = 0;
+
+    if (SALARIO == 100000)
+    {
+        SALARIO = SALARIO * ARS;
+
+        SALARIO = SALARIO * AFP;
+
+        SALARIO = SALARIO * ISR;
+
+        SALARIONETO = SALARIO;
+
+
+
+
+    }
+
+}
+
+<h2>nominas de empleados</h2>
+
+<div>
+    <p>nombre:@Model.nombre</p>
+    <p>apellido:@Model.apellido</p>
+    <p>cargo:@Model.cargo</p>
+    <p>salario:@Model.salario</p>
+
+    <p>descuento seguro de vida:@ARS</p>
+    <p>descuento afp:@AFP</p>
+    <p>decuento isr:@ISR</p>
+    <p>salario neto:@SALARIONETO</p>
+       
+</div>
+
+

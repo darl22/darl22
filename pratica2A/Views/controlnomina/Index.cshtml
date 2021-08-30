@@ -1,0 +1,72 @@
+﻿
+@model pratica2A.Models.nomina
+
+
+@{ 
+    double SALARIO = 100000;
+    double AFP =0.02;
+    double ARS=0.03 ;
+    double ISR=0.1 ;
+    double DESCUENTOS=0;
+    double SALARIONETO = 0;
+
+    if (SALARIO==100000)
+    {
+        DESCUENTOS = SALARIO * ARS;
+
+    }
+    if (SALARIO == 100000)
+    {
+        DESCUENTOS = SALARIO * AFP;
+
+    }
+    if (SALARIO == 100000)
+    {
+        DESCUENTOS = SALARIO * ISR;
+
+    }
+    if (SALARIO == 100000)
+    {
+        SALARIONETO = SALARIO - DESCUENTOS;
+
+    }
+
+
+    }
+
+}
+
+
+<h2>Index</h2>
+<p>esto es una prueba</p>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr class="table">
+                <th>nombre:@Model.nombre</th>
+                <th>apellido:@Model.apellido</th>
+                <th>cargo:@Model.cargo</th>
+                
+                <th>salario:@SALARIO</th>
+                
+                <th>descuento seguro de vida:@DESCUENTOS</th>
+                
+                <th>descuento afp:@DESCUENTOS</th>
+                
+                <th>decuento isr:@DESCUENTOS</th>
+                
+                <th>salario neto:@SALARIONETO</th>
+
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
